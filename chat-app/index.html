@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    />
+    <title>WebSocket Chat App</title>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex flex-col justify-between">
+      <div class="p-3 overflow-auto" id="chat">
+        <p class="text-gray-700 py-1">Text message 1</p>
+        <p class="text-gray-700 py-1">Text message 2</p>
+        <p class="text-gray-700 py-1">Text message 3</p>
+      </div>
+      <div class="flex">
+        <input
+          class="px-3 w-full border-t border-gray-300 outline-none text-gray-700"
+          id="message"
+          placeholder="Type your message here..."
+          type="text"
+        />
+        <button
+          class="px-8 py-3 bg-green-500 text-white hover:bg-green-600 transition-colors"
+          onclick="sendMessage()"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+    <script>
+      const ws = new WebSocket('ws://localhost:3000');
+    </script>
+  </body>
+</html>
