@@ -13,9 +13,7 @@
   <body>
     <div class="h-screen w-screen flex flex-col justify-between">
       <div class="p-3 overflow-auto" id="chat">
-        <p class="text-gray-700 py-1">Text message 1</p>
-        <p class="text-gray-700 py-1">Text message 2</p>
-        <p class="text-gray-700 py-1">Text message 3</p>
+        <!-- message content p tags -->
       </div>
       <div class="flex">
         <input
@@ -32,8 +30,6 @@
         </button>
       </div>
     </div>
-    <script>
-      const ws = new WebSocket('ws://localhost:3000');
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
