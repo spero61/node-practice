@@ -8,6 +8,15 @@
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
     />
+    <style>
+      body {
+        background-image: radial-gradient(
+          farthest-corner at 50px 50px,
+          rgb(243, 198, 206) 35%,
+          rgb(222, 223, 159) 90%
+        );
+      }
+    </style>
     <title>WebSocket Chat App</title>
   </head>
   <body>
@@ -21,10 +30,11 @@
           id="message"
           placeholder="Type your message here..."
           type="text"
+          autofocus
         />
         <button
           class="px-8 py-3 bg-green-500 text-white hover:bg-green-600 transition-colors"
-          onclick="sendMessage()"
+          id="sendBtn"
         >
           Send
         </button>
